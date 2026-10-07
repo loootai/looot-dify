@@ -1,0 +1,29 @@
+version: 0.0.1
+type: plugin
+author: looot
+name: looot
+label:
+  en_US: looot
+description:
+  en_US: Search, inspect and run 2,500+ data API endpoints (emails, companies, SERP, news) with one prepaid looot balance.
+icon: icon.png
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/looot.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 1.0.0
+created_at: 2026-10-07T23:37:12.516542+02:00
+privacy: PRIVACY.md
+repo: https://github.com/loootai/looot-dify
+verified: false

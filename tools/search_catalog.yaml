@@ -1,0 +1,73 @@
+identity:
+  name: search_catalog
+  author: looot
+  label:
+    en_US: "Search catalog"
+description:
+  human:
+    en_US: "Find looot endpoints by what you want to do. Free."
+  llm: "Search the looot catalog of 2,500+ data API endpoints by describing the task in plain words, for example 'find the work email of a person at a company'. Returns matching endpoints and jobs with prices. Free. Use the returned id with inspect_operation."
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: "Query"
+    human_description:
+      en_US: "What you want to do, in plain words"
+    llm_description: "What you want to do, in plain words"
+    form: llm
+  - name: limit
+    type: number
+    required: false
+    label:
+      en_US: "Limit"
+    human_description:
+      en_US: "Maximum number of results (default 10)"
+    llm_description: "Maximum number of results (default 10)"
+    form: llm
+    default: 10
+  - name: provider
+    type: string
+    required: false
+    label:
+      en_US: "Provider"
+    human_description:
+      en_US: "Only endpoints from this provider"
+    llm_description: "Only endpoints from this provider"
+    form: llm
+  - name: category
+    type: string
+    required: false
+    label:
+      en_US: "Category"
+    human_description:
+      en_US: "Only endpoints in this category"
+    llm_description: "Only endpoints in this category"
+    form: llm
+  - name: prefer
+    type: select
+    required: false
+    label:
+      en_US: "Prefer"
+    human_description:
+      en_US: "Rank by cheapest, fastest or most reliable"
+    llm_description: "Rank by cheapest, fastest or most reliable"
+    form: llm
+    default: balanced
+    options:
+      - value: balanced
+        label:
+          en_US: "Balanced"
+      - value: cheapest
+        label:
+          en_US: "Cheapest"
+      - value: fastest
+        label:
+          en_US: "Fastest"
+      - value: reliable
+        label:
+          en_US: "Reliable"
+extra:
+  python:
+    source: tools/search_catalog.py

@@ -1,0 +1,31 @@
+identity:
+  author: looot
+  name: looot
+  label:
+    en_US: looot
+  description:
+    en_US: Search, inspect and run 2,500+ data API endpoints (emails, companies, SERP, news) with one prepaid looot balance.
+  icon: icon.png
+  tags:
+    - search
+    - utilities
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Agent token
+    placeholder:
+      en_US: Paste your looot agent token
+    help:
+      en_US: Create one in the looot dashboard under Settings, Agent tokens. Tick catalog.read, runs.read, runs.execute and usage.read.
+    url: https://looot.ai
+tools:
+  - tools/search_catalog.yaml
+  - tools/inspect_operation.yaml
+  - tools/run_operation.yaml
+  - tools/get_run.yaml
+  - tools/get_balance.yaml
+extra:
+  python:
+    source: provider/looot.py

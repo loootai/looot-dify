@@ -1,0 +1,70 @@
+identity:
+  name: run_operation
+  author: looot
+  label:
+    en_US: "Run operation"
+description:
+  human:
+    en_US: "Run an endpoint or job. Spends prepaid credit; a failed call costs nothing."
+  llm: "Run one looot endpoint or job and spend prepaid credit. Failed calls cost nothing. Call inspect_operation first and pass input with the exact field names it lists. Returns the result, or a run id to read later with get_run."
+parameters:
+  - name: endpoint_id
+    type: string
+    required: true
+    label:
+      en_US: "Endpoint ID"
+    human_description:
+      en_US: "An id from search_catalog, or a job written as job:people.email.find"
+    llm_description: "An id from search_catalog, or a job written as job:people.email.find"
+    form: llm
+  - name: input
+    type: string
+    required: true
+    label:
+      en_US: "Input (JSON)"
+    human_description:
+      en_US: "The input object as a JSON string, using the field names from inspect_operation"
+    llm_description: "The input object as a JSON string, using the field names from inspect_operation"
+    form: llm
+  - name: idempotency_key
+    type: string
+    required: false
+    label:
+      en_US: "Idempotency key"
+    human_description:
+      en_US: "Same key and same input never pays twice. Leave empty to generate one."
+    llm_description: "Same key and same input never pays twice. Leave empty to generate one."
+    form: llm
+  - name: fallback
+    type: boolean
+    required: false
+    label:
+      en_US: "Fallback"
+    human_description:
+      en_US: "Try the next provider of the same job when the first finds nothing. Works with job: ids."
+    llm_description: "Try the next provider of the same job when the first finds nothing. Works with job: ids."
+    form: llm
+    default: true
+  - name: max_cost_usd
+    type: number
+    required: false
+    label:
+      en_US: "Max cost (USD)"
+    human_description:
+      en_US: "Cap for the whole fallback route. 0 means no extra cap."
+    llm_description: "Cap for the whole fallback route. 0 means no extra cap."
+    form: llm
+    default: 0
+  - name: wait
+    type: number
+    required: false
+    label:
+      en_US: "Wait (seconds)"
+    human_description:
+      en_US: "How long to wait for the result before returning a run id. 0 returns at once."
+    llm_description: "How long to wait for the result before returning a run id. 0 returns at once."
+    form: llm
+    default: 20
+extra:
+  python:
+    source: tools/run_operation.py

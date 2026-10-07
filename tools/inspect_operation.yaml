@@ -1,0 +1,22 @@
+identity:
+  name: inspect_operation
+  author: looot
+  label:
+    en_US: "Inspect operation"
+description:
+  human:
+    en_US: "Read the exact inputs, output and price of an endpoint or job. Free."
+  llm: "Read the exact input fields, output shape and price of one looot endpoint or job. Always call this before run_operation and use the exact field names it lists. Free."
+parameters:
+  - name: endpoint_id
+    type: string
+    required: true
+    label:
+      en_US: "Endpoint ID"
+    human_description:
+      en_US: "An id from search_catalog, or a job written as job:people.email.find"
+    llm_description: "An id from search_catalog, or a job written as job:people.email.find"
+    form: llm
+extra:
+  python:
+    source: tools/inspect_operation.py

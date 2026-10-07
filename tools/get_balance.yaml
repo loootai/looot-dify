@@ -1,0 +1,13 @@
+identity:
+  name: get_balance
+  author: looot
+  label:
+    en_US: "Get balance"
+description:
+  human:
+    en_US: "Read the available prepaid credit and the top-up link."
+  llm: "Read the available prepaid looot credit and the top-up link."
+parameters: []
+extra:
+  python:
+    source: tools/get_balance.py

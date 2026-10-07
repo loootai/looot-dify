@@ -1,0 +1,22 @@
+identity:
+  name: get_run
+  author: looot
+  label:
+    en_US: "Get run"
+description:
+  human:
+    en_US: "Read one run: status, result and cost."
+  llm: "Read one looot run by id: status, result and cost. Use it when run_operation returned a run id without a result."
+parameters:
+  - name: run_id
+    type: string
+    required: true
+    label:
+      en_US: "Run ID"
+    human_description:
+      en_US: "The run id returned by run_operation"
+    llm_description: "The run id returned by run_operation"
+    form: llm
+extra:
+  python:
+    source: tools/get_run.py
