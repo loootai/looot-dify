@@ -179,3 +179,5 @@ Thumbs.db
 # repo-only files
 scripts/
 .githooks/
+assets/
+llms.txt
