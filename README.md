@@ -1,4 +1,8 @@
+<p align="center"><img src="assets/hero.png" alt="looot-dify: looot plugin for Dify" width="100%"></p>
+
 # looot for Dify
+
+[![License](https://img.shields.io/github/license/loootai/looot-dify)](LICENSE) [![Release](https://img.shields.io/github/v/release/loootai/looot-dify)](https://github.com/loootai/looot-dify/releases) [![Docs](https://img.shields.io/badge/docs-docs.looot.ai-12A06A)](https://docs.looot.ai)
 
 looot gives an AI agent one key and one prepaid balance for 2,500+ data API endpoints from 90+ providers: work emails, phone numbers, company and people search, Google results, web pages, news, LinkedIn profiles and local businesses. The agent searches the catalog, sees the price before it runs, and pays per call. A failed call costs nothing. There is no subscription, and you can top up from $5.
 
