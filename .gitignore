@@ -176,3 +176,6 @@ cython_debug/
 .LSOverride
 # build output, attach to the GitHub release instead
 *.difypkg
+
+# Local dify publishing kit (account-specific, may hold a token)
+dify-publishing/
