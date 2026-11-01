@@ -6,7 +6,7 @@ identity:
 description:
   human:
     en_US: "Find looot endpoints by what you want to do. Free."
-  llm: "Search the looot catalog of 2,500+ data API endpoints by describing the task in plain words, for example 'find the work email of a person at a company'. Returns matching endpoints and jobs with prices. Free. Use the returned id with inspect_operation."
+  llm: "Search the looot catalog of 4,200+ data API endpoints by describing the task in plain words, for example 'find the work email of a person at a company'. Returns matching endpoints and jobs with prices. Free. Use the returned id with inspect_operation."
 parameters:
   - name: query
     type: string

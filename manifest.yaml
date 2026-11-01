@@ -5,7 +5,7 @@ name: looot
 label:
   en_US: looot
 description:
-  en_US: Search, inspect and run 2,500+ data API endpoints (emails, companies, SERP, news) with one prepaid looot balance.
+  en_US: Search, inspect and run 4,200+ data API endpoints (emails, companies, SERP, news) with one prepaid looot balance.
 icon: icon.png
 resource:
   memory: 268435456
