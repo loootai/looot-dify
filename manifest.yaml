@@ -1,11 +1,11 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: looot
 name: looot
 label:
   en_US: looot
 description:
-  en_US: Search, inspect and run 4,200+ data API endpoints (emails, companies, SERP, news) with one prepaid looot balance.
+  en_US: Search, inspect and run 4,200+ data API endpoints from 300+ providers (emails, companies, SERP, news) with one prepaid looot balance.
 icon: icon.png
 resource:
   memory: 268435456
@@ -14,7 +14,7 @@ plugins:
   tools:
     - provider/looot.yaml
 meta:
-  version: 0.0.1
+  version: 0.0.2
   arch:
     - amd64
     - arm64
